@@ -3,6 +3,8 @@ import * as ReactDOMClient from "react-dom/client";
 
 import App from "./App";
 
+import "dracula-ui/styles/dracula-ui.css";
+
 const rootElement = document.getElementById("root");
 const root = ReactDOMClient.createRoot(rootElement);
 

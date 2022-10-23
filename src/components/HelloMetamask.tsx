@@ -3,7 +3,7 @@ import { useMetamask, ConnectMetamask, loadSmartContract } from "../metamask";
 import dapp from "../metamask/dapp";
 
 export default function HelloMetamask() {
-  const { user, setContract } = useMetamask();
+  const { user, setContract, disconnected } = useMetamask();
   const setSmartContract = () => {
     setContract(loadSmartContract(dapp.address, dapp.abi));
   };
@@ -28,6 +28,12 @@ export default function HelloMetamask() {
             <div className="my-3 uppercase tracking-wide text-xs">
               Balance: {user.balance.toString().slice(0, 10)} ETH
             </div>
+            <button
+              className="bg-red-500 text-white px-5 py-3 rounded-md my-2 font-bold tracking-wider text-center hover:cursor-pointer uppercase cursor-pointer"
+              onClick={disconnected}
+            >
+              Disconnected
+            </button>
           </>
         )}
       </div>

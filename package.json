@@ -12,6 +12,7 @@
   "main": "src/index.tsx",
   "dependencies": {
     "@web3-react/core": "6.1.9",
+    "dracula-ui": "^1.0.3",
     "ethers": "5.7.1",
     "react": "18.0.0",
     "react-dom": "18.0.0",
